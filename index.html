@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Editor</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="center">
+        <div class="container flex">
+            <div class="logo">
+                <h2>Cody Editor</h2>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><button id="saveButton"><i class="icon bi bi-cloud-download"></i>Save</button></li>
+                    <li><button id="orgupload"><i class="icon bi bi-upload"></i>Upload</button><input type="file" id="uploadbtn"></li>
+                    <li><button  onclick="run()"><i class="icon bi bi-play"></i></button></li>
+                    <i id="closebtn" class="bi bi-x"></i>
+                </ul>
+            </nav>
+            <div class="hamberger-menue">
+                <i class="bi bi-list"></i>
+            </div>
+        </div>
+    </header>
+    <div class="editorsection center">
+        <div class="editorcontent flex">
+            <div class="editorcontainer">
+                <div class="htmlcontainer editor">
+                    <h2 class="html"><i class="icon bi bi-filetype-html"></i>HTML</h2>
+                    <textarea name="html" id="html" placeholder="Type HTML"></textarea>
+                </div>
+                <div class="csscontainer editor">
+                    <h2 class="css" ><i class="icon bi bi-filetype-css"></i>CSS</h2>
+                    <textarea name="css" id="css" placeholder="Type Css"></textarea>
+                </div>
+                <div class="jscontainer editor">
+                    <h2 class="javascript"><i class="icon bi bi-filetype-js"></i>Javascript</h2>
+                    <textarea name="js" id="js" placeholder="Type Javascript"></textarea>
+                </div>
+            </div>
+            <div class="outputsection">
+                <h2>Output Preview:</h2>
+                <iframe id="output"></iframe>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="savefile.js"></script>
+    <script src="uploadfile.js"></script>
+</body>
+</html>
